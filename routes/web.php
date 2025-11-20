@@ -12,7 +12,11 @@ Route::get('/', function () {
 */
 
 // ----------------------------------------
+<<<<<<< HEAD
 Route::get('/auth/login', function () {
+=======
+Route::get('login', function () {
+>>>>>>> f6a61ca2233c002450eab2b3119ef95241bde8d8
     return view('auth.login');
 });
 Route::get('/auth/logout', function () {
@@ -31,7 +35,11 @@ Route::prefix('familias-profesionales')->group(function () {
     });
 
     Route::get('/show/{id}	', function ($id) {
+<<<<<<< HEAD
         return view('familias-profesionales.show', array('id'=>$id));
+=======
+        return view('familias-profesionales.show',array('id'=>$id));
+>>>>>>> f6a61ca2233c002450eab2b3119ef95241bde8d8
     }) -> where('id', '[0-9]+');
 
     Route::get('/edit/{id}', function ($id) {
