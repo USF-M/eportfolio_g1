@@ -13,9 +13,10 @@
                 <section class="box">
                     <a href="#" class="images featured">
                         @if ($familia_profesional->imagen)
-                            <img width="300" style="height:300px" src="{{ Storage::url($familia_profesional->imagen) }}" alt="imagen" class="img-thumbnail">
+                            <img width="300" style="height:300px" src="{{ Storage::url($familia_profesional->imagen) }}"
+                                alt="imagen" class="img-thumbnail">
                         @else
-                            <img src="{{ asset('/images/logo.png') }}" alt="" style="width:15vh; height: 15vh;"/>
+                            <img src="{{ asset('/images/logo.png') }}" alt="" style="width:15vh; height: 15vh;" />
                         @endif
                     </a>
                     <header>

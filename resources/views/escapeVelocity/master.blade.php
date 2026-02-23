@@ -35,7 +35,6 @@
 
 
 	</div>
-
 	<!-- Scripts -->
 	<script src="{{ asset('/escapeVelocity/assets/js/jquery.min.js') }}"></script>
 	<script src="{{ asset('/escapeVelocity/assets/js/jquery.dropotron.min.js') }}"></script>

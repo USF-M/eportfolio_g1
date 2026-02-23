@@ -5,7 +5,6 @@
 		@yield('logo')
 	</div>
 
-
 	<!-- Nav -->
 	<nav id="nav">
 		<ul>
@@ -16,9 +15,9 @@
 							href="{{ action([App\Http\Controllers\FamiliasProfesionalesController::class, 'getIndex']) }}">Listado</a>
 					</li>
 					@auth
-					<li><a
-							href="{{ action([App\Http\Controllers\FamiliasProfesionalesController::class, 'getCreate']) }}">Create</a>
-					</li>
+						<li><a
+								href="{{ action([App\Http\Controllers\FamiliasProfesionalesController::class, 'getCreate']) }}">Create</a>
+						</li>
 					@endauth
 				</ul>
 			</li>
@@ -29,9 +28,9 @@
 							href="{{ action([App\Http\Controllers\CiclosFormativosController::class, 'getIndex']) }}">Listado</a>
 					</li>
 					@auth
-					<li><a
-							href="{{ action([App\Http\Controllers\CiclosFormativosController::class, 'getCreate']) }}">Create</a>
-					</li>
+						<li><a
+								href="{{ action([App\Http\Controllers\CiclosFormativosController::class, 'getCreate']) }}">Create</a>
+						</li>
 					@endauth
 				</ul>
 			</li>
@@ -42,9 +41,9 @@
 							href="{{ action([App\Http\Controllers\ResultadosAprendizajeController::class, 'getIndex']) }}">Listado</a>
 					</li>
 					@auth
-					<li><a
-							href="{{ action([App\Http\Controllers\ResultadosAprendizajeController::class, 'getCreate']) }}">Create</a>
-					</li>
+						<li><a
+								href="{{ action([App\Http\Controllers\ResultadosAprendizajeController::class, 'getCreate']) }}">Create</a>
+						</li>
 					@endauth
 				</ul>
 			</li>
@@ -55,9 +54,9 @@
 							href="{{ action([App\Http\Controllers\CriteriosEvaluacionController::class, 'getIndex']) }}">Listado</a>
 					</li>
 					@auth
-					<li><a
-							href="{{ action([App\Http\Controllers\CriteriosEvaluacionController::class, 'getCreate']) }}">Create</a>
-					</li>
+						<li><a
+								href="{{ action([App\Http\Controllers\CriteriosEvaluacionController::class, 'getCreate']) }}">Create</a>
+						</li>
 					@endauth
 				</ul>
 			</li>
@@ -86,14 +85,15 @@
 				<li>
 					<a>{{ Auth::user()->name }}
 						@if (Auth::user()->imagen)
-							<img src="{{ Storage::url(Auth::user()->imagen) }}" alt="Avatar de Usuario" style="width: 30px; height: 20px;" class="w-20 h-20 rounded-full">
-							@endif
+							<img src="{{ Storage::url(Auth::user()->imagen) }}" alt="Avatar de Usuario"
+								style="width: 30px; height: 20px;" class="w-20 h-20 rounded-full">
+						@endif
 					</a>
 					<ul>
 						<li>
 							<x-dropdown-link :href="route('profile.edit')">
 								{{ __('Profile') }}
-								
+
 							</x-dropdown-link>
 						</li>
 						<li>
@@ -102,7 +102,7 @@
 								@csrf
 
 								<x-dropdown-link :href="route('logout')" onclick="event.preventDefault();
-													this.closest('form').submit();">
+														this.closest('form').submit();">
 									{{ __('Log Out') }}
 								</x-dropdown-link>
 							</form>

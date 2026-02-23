@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\CiclosFormativosController;
 use App\Http\Controllers\CriteriosEvaluacionController;
 use App\Http\Controllers\ResultadosAprendizajeController;
@@ -112,6 +113,8 @@ Route::prefix('evidencias')->group(function () {
         Route::put('update/{id}', [EvidenciasController::class, 'update'])->where('id', '[0-9]+');
     });
 });
+
+Route::get('mail/prueba', [MailController::class, 'prueba'])->name('mail.prueba');
 
 require __DIR__ . '/auth.php';
 require __DIR__ . '/analisis.php';
